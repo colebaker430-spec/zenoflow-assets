@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>We can do this for you | ZenoFlow</title>
+<meta name="description" content="How ZenoFlow gets a business 5+ hours a week back, plus 3 free AI tools we use every day.">
+<meta property="og:title" content="We can do this for you | ZenoFlow">
+<meta property="og:description" content="5+ hours a week back, guaranteed. Plus 3 free AI tools we use every day.">
+<meta property="og:image" content="https://zenoflowai.com/assets/zenoflow-og.png">
+<link rel="icon" href="https://zenoflowai.com/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a0a;--panel:#151512;--cream:#f0ebe0;--gold:#c9a876;--gold-2:#d8ba88;--tan:#9a958c;--line:rgba(201,168,118,.18);--soft:rgba(240,235,224,.08)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--black);color:var(--cream);font:17px/1.55 "Schibsted Grotesk",system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+em.s{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;color:var(--gold-2);font-size:1.12em}
+
+/* first screen */
+.hero{padding:22px 0 40px;
+  background:radial-gradient(120% 70% at 50% 0%,rgba(201,168,118,.16),transparent 60%)}
+.mark{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.01em;padding-bottom:44px}
+.mark img{width:30px;height:30px}
+h1{font-size:clamp(44px,12.5vw,76px);line-height:.98;font-weight:800;letter-spacing:-.025em}
+.lead{margin-top:20px;font-size:19px;color:#d9d3c6;max-width:30em}
+.lead b{color:var(--cream)}
+.book{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:28px;width:100%;min-height:68px;padding:16px 22px;
+  background:var(--gold);color:#111;text-decoration:none;font-weight:800;font-size:20px;border-radius:16px;
+  box-shadow:0 10px 30px rgba(201,168,118,.25);transition:transform .15s,background .15s}
+.book:active{transform:scale(.98)}.book:hover{background:var(--gold-2)}
+.book svg{flex:none}
+.under{margin-top:12px;font-size:14px;color:var(--tan);text-align:center}
+.hint{padding-top:30px;text-align:center;color:var(--tan);font-size:14px}
+
+section{padding:56px 0;border-top:1px solid var(--soft)}
+h2{font-size:clamp(28px,7.5vw,40px);line-height:1.08;font-weight:800;letter-spacing:-.015em}
+.sub{margin-top:12px;color:#cfc9bc}
+
+.steps{margin-top:28px;display:grid;gap:14px}
+.step{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:16px}
+.num{width:44px;height:44px;border-radius:12px;background:rgba(201,168,118,.12);color:var(--gold-2);display:grid;place-items:center;font-weight:800;font-size:20px}
+.step h3{font-size:18px;font-weight:700}
+.step p{margin-top:4px;color:#cfc9bc;font-size:16px}
+
+.proof{margin-top:22px;padding:20px;border-left:3px solid var(--gold);background:linear-gradient(90deg,rgba(201,168,118,.08),transparent)}
+.proof p{font-size:18px}.proof span{display:block;margin-top:8px;color:var(--tan);font-size:14px}
+.promise{margin-top:22px;font-weight:700;font-size:18px}
+
+.tool{margin-top:22px;padding:22px 20px;background:var(--panel);border:1px solid var(--line);border-radius:18px}
+.tool h3{font-size:22px;font-weight:800;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.tool h3 small{font-size:14px;font-weight:500;color:var(--tan)}
+.tool p{margin-top:8px;color:#d9d3c6}
+.use{margin-top:12px;font-size:15px;color:#cfc9bc}.use b{color:var(--cream)}
+.inst{margin-top:16px}
+.inst h4{font-size:14px;font-weight:600;color:var(--gold-2);margin:14px 0 6px}
+.code{position:relative;background:#0d0d0b;border:1px solid var(--soft);border-radius:12px}
+.code pre{margin:0;padding:44px 14px 14px;font:13px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;color:#e9e3d6;white-space:pre;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.copy{position:absolute;top:8px;right:8px;height:30px;padding:0 10px;border-radius:8px;border:1px solid var(--line);background:#1b1b17;color:var(--cream);font:600 12px "Schibsted Grotesk",sans-serif;cursor:pointer}
+.note{margin-top:10px;font-size:13px;color:var(--tan)}
+
+.end{text-align:left}
+.end .book{margin-top:24px}
+footer{padding:32px 0 120px;color:var(--tan);font-size:13px;text-align:center;border-top:1px solid var(--soft)}
+
+.bar{position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(10,10,10,.92);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s}
+.bar.on{transform:none}
+.bar a{display:flex;align-items:center;justify-content:center;max-width:600px;margin:0 auto;min-height:54px;border-radius:14px;background:var(--gold);color:#111;font-weight:800;font-size:17px;text-decoration:none}
+@media (min-width:700px){body{font-size:18px}.hero{padding-top:40px}}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <div class="mark"><img src="https://zenoflowai.com/assets/zenoflow-mark.png" alt="">ZenoFlow</div>
+  <h1>We can do this <em class="s">for you.</em></h1>
+  <p class="lead">You saw the reel. We build the AI systems behind it for real businesses, and they hand back <b>5+ hours a week</b>. Hit the button, and we'll show you what we'd take off your plate.</p>
+  <a class="book" id="book1" href="https://calendly.com/colebaker-zenoflowai/30min?utm_source=instagram&amp;utm_medium=dm&amp;utm_campaign=zeno">
+    Book a free call
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <p class="under">30 minutes. We look at your week together. You leave with a plan either way.</p>
+  <p class="hint">The free playbook and 3 tools are below &darr;</p>
+</div></header>
+
+<main>
+<section><div class="wrap">
+  <h2>How we get you 5+ hours a week back</h2>
+  <p class="sub">Every business has the same leak: the jobs that eat your day and never make you money.</p>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><div><h3>We find the hours</h3><p>On the call we walk through your week and pick the jobs that eat the most time. Answering the same emails, chasing leads, quoting, posting, follow-ups.</p></div></div>
+    <div class="step"><div class="num">2</div><div><h3>We build the system</h3><p>AI agents built around how your business actually runs, in your tools, your voice and your rules. Not a chatbot you have to babysit.</p></div></div>
+    <div class="step"><div class="num">3</div><div><h3>We run it with you</h3><p>We watch it, tune it and add to it every month, so it keeps working while you run the business.</p></div></div>
+  </div>
+  <div class="proof">
+    <p>Knighton Bee Farms is a two-person honey brand. "Where's my order?" emails were eating their week. Now an agent answers them.</p>
+    <span>About 10 hours a week back.</span>
+  </div>
+  <p class="promise">We find you 5+ hours a week, or your money back.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>3 free tools we use every day</h2>
+  <p class="sub">We run 100+ AI tools and skills inside ZenoFlow. These three are our favorites. They're free and work in Claude Code and Codex.</p>
+
+  <div class="tool">
+    <h3>/watch <small>Claude watches videos</small></h3>
+    <p>Hand it a video link or file. It pulls the frames and the transcript, so Claude can tell you what's in it and answer questions about it.</p>
+    <p class="use"><b>Use it for:</b> breaking down a competitor's ad, turning a training video into written steps, pulling hooks from reels that are working.</p>
+    <div class="inst">
+      <h4>Claude Code</h4>
+      <div class="code"><button class="copy">Copy</button><pre>/plugin marketplace add bradautomates/claude-video
+/plugin install watch@claude-video</pre></div>
+      <h4>Codex</h4>
+      <div class="code"><button class="copy">Copy</button><pre>codex plugin marketplace add bradautomates/claude-video
+codex plugin add watch@claude-video</pre></div>
+      <p class="note">Open source: github.com/bradautomates/claude-video</p>
+    </div>
+  </div>
+
+  <div class="tool">
+    <h3>Playwright <small>Claude uses a real browser</small></h3>
+    <p>Claude opens websites, clicks, fills in forms and reads pages for you, the same way you would.</p>
+    <p class="use"><b>Use it for:</b> checking your own booking form still works, pulling prices or listings from sites, filling out the same web form every week.</p>
+    <div class="inst">
+      <h4>Claude Code</h4>
+      <div class="code"><button class="copy">Copy</button><pre>claude mcp add playwright npx @playwright/mcp@latest</pre></div>
+      <h4>Codex</h4>
+      <div class="code"><button class="copy">Copy</button><pre>codex mcp add playwright npx "@playwright/mcp@latest"</pre></div>
+      <p class="note">Needs Node.js 18 or newer. From Microsoft: github.com/microsoft/playwright-mcp</p>
+    </div>
+  </div>
+
+  <div class="tool">
+    <h3>Humanizer <small>Writing that sounds like you</small></h3>
+    <p>It rewrites AI-sounding text so it reads like a person wrote it, without changing what it says.</p>
+    <p class="use"><b>Use it for:</b> customer emails, replies, posts and anything else people can tell was written by a robot.</p>
+    <div class="inst">
+      <h4>Claude Code</h4>
+      <div class="code"><button class="copy">Copy</button><pre>/plugin marketplace add blader/humanizer
+/plugin install humanizer@humanizer</pre></div>
+      <h4>Codex</h4>
+      <div class="code"><button class="copy">Copy</button><pre>npx skills add blader/humanizer --global --agent codex</pre></div>
+      <p class="note">Open source: github.com/blader/humanizer</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="end"><div class="wrap">
+  <h2>Installing a tool is the easy part.</h2>
+  <p class="sub">Making 100+ of them run inside your business every day, on your customers, your leads and your content, without you touching them, is the work. That's what we do.</p>
+  <a class="book" href="https://calendly.com/colebaker-zenoflowai/30min?utm_source=instagram&amp;utm_medium=dm&amp;utm_campaign=zeno&amp;utm_content=bottom">Book a free call. We'll build it for you.</a>
+  <p class="promise">We find you 5+ hours a week, or you don't pay.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">ZenoFlow LLC &middot; <a href="/">zenoflowai.com</a></div></footer>
+
+<div class="bar" id="bar"><a href="https://calendly.com/colebaker-zenoflowai/30min?utm_source=instagram&amp;utm_medium=dm&amp;utm_campaign=zeno&amp;utm_content=bar">Book a free call</a></div>
+
+<script>
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
+  const t=b.parentElement.querySelector('pre').textContent.trim();
+  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1500)}).catch(()=>{});
+}));
+const bar=document.getElementById('bar'),hero=document.getElementById('book1');
+new IntersectionObserver(([e])=>bar.classList.toggle('on',!e.isIntersecting&&e.boundingClientRect.top<0)).observe(hero);
+</script>
+</body>
+</html>
